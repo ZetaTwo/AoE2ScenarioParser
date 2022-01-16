@@ -1,0 +1,71 @@
+//------------------------------------------------
+//--- 010 Editor v11.0.1 Binary Template
+//
+//      File: 
+//   Authors: 
+//   Version: 
+//   Purpose: 
+//  Category: 
+// File Mask: 
+//  ID Bytes: 
+//   History: 
+//------------------------------------------------
+
+
+// Header
+uint32 next_unit_id;
+float version2;
+
+typedef struct {
+    char name[256];
+} player_name;
+
+player_name player_names[16];
+
+uint32 string_table_player_names[16];
+
+typedef struct {
+    uint32 active;
+    uint32 human;
+    uint32 civilization;
+    uint32 cty_mode;
+} player_data1;
+
+player_data1 players_data1[16];
+
+uint32 unk1[16];
+
+uchar conquest_mode;
+uint16 mission_items_counter;
+uint16 mission_available;
+float mission_timeline;
+
+typedef struct {
+    uint16 len;
+    char value[len];
+} string16;
+
+string16 original_filename;
+
+// Messages
+uint32 str_table_instructions;
+uint32 str_table_hints;
+uint32 str_table_vistory;
+uint32 str_table_loss;
+uint32 str_table_history;
+uint32 str_table_scouts;
+
+string16 instructions;
+string16 hints;
+string16 vistory;
+string16 loss;
+string16 history;
+string16 scouts;
+
+// Cinematics
+string16 pregame_cinematic;
+string16 vistory_cinematic;
+string16 loss_cinematic;
+// 1 byte padding maybe?
+
+// Background Image
